@@ -195,6 +195,8 @@ int Opcode_Operation(int opcode, int rd, int rs, int rt, int *rege, int *io_rege
 				pc_help -= 1;
 			}
 		}
+		else
+			pc += 1;
 	}
 	if (opcode == 12) {	//bge instruction
 		if (rege[rs] >= rege[rt]) {
@@ -206,6 +208,8 @@ int Opcode_Operation(int opcode, int rd, int rs, int rt, int *rege, int *io_rege
 				pc_help -= 1;
 			}
 		}
+		else
+			pc += 1;
 	}
 	if (opcode == 13) {	//jal instruction
 		rege[15] = pc + 1;
